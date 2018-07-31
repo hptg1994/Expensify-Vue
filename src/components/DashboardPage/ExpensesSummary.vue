@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import numeral from 'numeral';
 export default {
   data:() => {
     return {
@@ -21,10 +22,17 @@ export default {
     }
   },
 
+  methods:{
+    formattedExpansesTotal:() => {
+      numeral(this.expenseTotal/100).format("$0,0.00");
+    }
+  },
+
   watch:{
     expenseWord:function(){
       return this.expenseCount === 1 ? "expense":"expenses";
-    }
+    },
   }  
+
 }
 </script>

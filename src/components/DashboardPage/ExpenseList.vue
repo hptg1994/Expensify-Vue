@@ -7,14 +7,14 @@
     </div>
     <div class="list-body">
       {
-        props.expenses.length === 0 ? (
+        this.expenses.length === 0 ? (
           <div class="list-item list-item--message">
             <span>No expenses</span>
           </div>
         ) : (
-            props.expenses.map((expense) => {
-              return <ExpenseListItem key={expense.id} {...expense} />;
-            })
+            <div v-for="(expense,index) in expenses" :key="index">
+               <ExpenseListItem key={expense.id} {...expense} />;
+            </div>
           )
       }
     </div>
@@ -22,7 +22,13 @@
 </template>
 
 <script>
+  import {mapGetters} from 'vuex'
+  
   export default {
-
+    computed:{
+      ...mapGetters([
+        "allExpense",
+      ])
+    }
   }
 </script>
