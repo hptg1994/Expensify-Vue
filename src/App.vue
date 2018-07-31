@@ -1,9 +1,7 @@
 <template>
   <div id="app"> 
     <Header></Header>
-    <router-view>
-
-    </router-view>
+    <router-view> </router-view>
   </div>
 </template>
 <script>
@@ -125,6 +123,33 @@ button {
 
 .list-item__data {
   margin: 1.2rem 0 0 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.6rem;
+}
+
+.input-group__item {
+  margin-bottom: 1.2rem;
+}
+
+.text-input,.select{
+  border: 1px solid #cacccd;
+  height: 50px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1.2rem;
+}
+
+.textarea {
+  border: 1px solid #cacccd;
+  height: 50px;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 1.2rem;
+  height: 10rem;
 }
 
 </style>

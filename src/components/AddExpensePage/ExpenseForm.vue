@@ -34,32 +34,7 @@ export default {
 </script>
 
 <style>
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.6rem;
-}
 
-.input-group__item {
-  margin-bottom: 1.2rem;
-}
-
-.text-input {
-  border: 1px solid #cacccd;
-  height: 50px;
-  font-size: 1.8rem;
-  font-weight: 300;
-  padding: 1.2rem;
-}
-
-.textarea {
-  border: 1px solid #cacccd;
-  height: 50px;
-  font-size: 1.8rem;
-  font-weight: 300;
-  padding: 1.2rem;
-  height: 10rem;
-}
 </style>
 
 

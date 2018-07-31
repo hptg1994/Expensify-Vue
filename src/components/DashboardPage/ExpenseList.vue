@@ -6,26 +6,28 @@
       <div class="show-for-desktop">Amount</div>
     </div>
     <div class="list-body">
-      {
-        this.expenses.length === 0 ? (
-          <div class="list-item list-item--message">
-            <span>No expenses</span>
-          </div>
-        ) : (
-            <div v-for="(expense,index) in expenses" :key="index">
-               <ExpenseListItem key={expense.id} {...expense} />;
-            </div>
-          )
-      }
+      <div class="list-item list-item--message" v-if="this.expenses.length === 0">
+        <span>No expenses</span>
+      </div>
+
+      <div v-else v-for="(expense,index) in expenses" :key="index">
+        <ExpenseListItem key={expense.id} {...expense}/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   import {mapGetters} from 'vuex'
-  
+
   export default {
-    computed:{
+    data: () => {
+      return {
+        expenses: [],
+      }
+    },
+    methods: {},
+    computed: {
       ...mapGetters([
         "allExpense",
       ])

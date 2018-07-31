@@ -1,23 +1,25 @@
 <template>
   <div class="content-container">
         <div class="input-group">
+
           <div class="input-group__item">
             <input
               type="text"
               class="text-input"
               placeholder="Search expenses"
-              value={this.props.filters.text}
-              onChange={this.onTextChange}
+              v-model="serching"
             />
           </div>
+
           <div class="input-group__item">
             <select
               class="select"
-              value={this.props.filters.sortBy}>
-              <option :value="date">Date</option>
-              <option :value="amount">Amount</option>
+              v-model="selectSortWay"
+              >
+              <option v-for="(option,index) in options" :key="index">{{ option }}</option>
             </select>
           </div>
+
           <div className="input-group__item">
            <!--  <DateRangePicker
               startDate={this.props.filters.startDate}
@@ -37,7 +39,11 @@
 <script>
   export default {
     data:() => {
-      
-    }
+      return {
+        serching:"",
+        selectSortWay:"Date",
+        options:["Date","Amount"]
+      }
+    },
   }
 </script>

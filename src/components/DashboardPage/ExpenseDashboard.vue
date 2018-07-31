@@ -1,6 +1,8 @@
 <template>
   <div id = "ExpenseDashboard"> 
     <ExpensesSummary></ExpensesSummary>
+    <expense-list-filters></expense-list-filters>
+    <ExpenseList></ExpenseList>
   </div>
 </template>
 
