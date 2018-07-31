@@ -127,8 +127,10 @@ button {
 
 .input-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-bottom: 1.6rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-group__item {
