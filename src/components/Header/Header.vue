@@ -3,7 +3,7 @@
     <div class="content-container">
       <div class="header__content">
         <router-link to="/" class="header__title">
-          <h1>Expensify</h1>
+          <h2>Expensify</h2>
         </router-link>
       </div>
     </div>
@@ -13,25 +13,6 @@
 <script>
 </script>
 
-<style>
-.header {
-  background: #364051;
-}
+<style src = "./Header.css"></style>
 
-.header__content {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 1.2rem 0;
-}
-
-.header__title {
-  color: white;
-  text-decoration: none;
-}
-
-.header__title h1 {
-  margin: 0;
-}
-</style>
 

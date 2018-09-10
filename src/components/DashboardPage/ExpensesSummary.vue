@@ -2,7 +2,7 @@
   <div class="ExpenseSummary">
     <div class="page-header">
       <div class="content-container">
-        <h1 class="page-header__title">Viewing <span>{{expenseCount}}</span> {{ CountExpenseWord() }},Total <span>{{formattedExpansesTotal()}}</span></h1>
+        <p class="page-header__title">Viewing <span>{{expenseCount}}</span> {{ CountExpenseWord() }},Total <span>{{formattedExpansesTotal()}}</span></p>
         <div class="page-header__actions">
           <router-link class="button" to="/create">Add Expense</router-link>
         </div>
@@ -31,3 +31,5 @@ export default {
   },
 }
 </script>
+
+<style src = "./ExpensesSummary.css"></style>

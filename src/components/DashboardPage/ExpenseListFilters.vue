@@ -12,10 +12,7 @@
           </div>
 
           <div class="input-group__item">
-            <select
-              class="select"
-              v-model="selectSortWay"
-              >
+            <select class="select" v-model="selectSortWay">
               <option v-for="(option,index) in options" :key="index">{{ option }}</option>
             </select>
           </div>
@@ -47,3 +44,7 @@
     },
   }
 </script>
+
+<style src = "./ExpenseListFilters.css" >
+</style>
+
