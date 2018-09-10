@@ -4,7 +4,7 @@ A website that helps you to save the info of expense in detail. This is coded in
 
 ## ScreenShots
 
-![Expensify](resources/Expensify.png)
+![Expensify](https://github.com/hptg1994/Expensify_React/blob/master/resources/Expensify.png)
 
 ## Technology Track:
 
