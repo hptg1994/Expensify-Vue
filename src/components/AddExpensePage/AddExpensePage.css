@@ -1,0 +1,19 @@
+.page-header {
+  background: #f7f7f7;
+  margin-bottom: 30px;
+  padding: 35px 0;
+}
+
+.page-header__actions {
+  margin-top: 20px;
+}
+
+.page-header__title {
+  font-weight: 300;
+  margin: 0;
+  font-size: 30px;
+}
+
+.page-header__title span {
+  font-weight: 700;
+}

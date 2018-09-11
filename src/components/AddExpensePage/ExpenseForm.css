@@ -1,0 +1,25 @@
+/* .form {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form__error {
+  margin: 0 0 18px 0;
+  font-style: italic;
+}
+
+.text-input {
+  margin-bottom: 1.6rem;
+}
+
+.expenseForm-datapicker {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cacccd;
+  height: 50px;
+  font-size: 18px;
+  width: 140px;
+  font-weight: 300;
+  padding: 0px 10px;
+  margin-bottom: 1.6rem;
+}

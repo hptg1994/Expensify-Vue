@@ -1,33 +1,45 @@
-const state = [],
+import database from "../../firebase/firebase";
 
 const getters = {
-  allExpense:state => {
+  allExpense: state => {
     return state;
   }
 }
 
 const mutations = {
   // add expense
-  "addExpense":(state,payload) => {
-    const expense = {
+  "addExpense": (state, expenseData) => {
+    const uid = state.auth.uid
+    const {
       description = "",
-      note = "",
-      aamount = "",
-      createAt = 0,
+        note = "",
+        aamount = "",
+        createdAt = 0,
+    } = expenseData;
+    const expense = {
+      description,
+      note,
+      amount,
+      createdAt
     }
-    state.push(expense);
+    
+    /* return database.ref("users/${uid}/expenses").push(expense).then((ref) => {
+
+    }) */
   },
 
   // remove expense
-  "removeExpense":(state,payload) => {
+  "removeExpense": (state, payload) => {
     state.filter((item) => item.id !== payload)
   },
 
-  "editExpense":(state,payload) => {
+  "editExpense": (state, payload) => {
     state.map((expense) => {
-      if(expense.id === payload.id){
-        return {...expense,payload}
-      }else{
+      if (expense.id === payload.id) {
+        return { ...expense,
+          payload
+        }
+      } else {
         return expense;
       }
     })
@@ -35,14 +47,18 @@ const mutations = {
 }
 
 const actions = {
-  addExpenseAction:({commit},payload) => {
-    commit("addExpense",payload);
+  addExpenseAction: ({
+    commit
+  }, payload) => {
+    commit("addExpense", payload);
   },
-  removeExpenseAction:({commit},payload) => {
-    commit("removeExpense",payload);
+  removeExpenseAction: ({
+    commit
+  }, payload) => {
+    commit("removeExpense", payload);
   },
-  editExpense:(state,payload) => {
-    commit("editExpense",payload);
+  editExpense: (state, payload) => {
+    commit("editExpense", payload);
   }
 }
 
@@ -52,4 +68,3 @@ export default {
   actions,
   getters
 }
-

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div className="page-header">
-      <div className="content-container">
-        <h1 className="page-header__title">Add Expense</h1>
+    <div class="page-header">
+      <div class="content-container">
+        <h1 class="page-header__title">Add Expense</h1>
       </div>
-    </div>
-    <div className="content-container">
-      <ExpenseForm></ExpenseForm>
+    </div>  
+    <div class="content-container">
+      <ExpenseForm />
     </div>
   </div>
 </template>
@@ -16,6 +16,11 @@ import ExpenseForm  from "./ExpenseForm";
 export default {
   components:{
     ExpenseForm
-  }
+  },
 }
 </script>
+
+<style src = "./AddExpensePage.css" scoped>
+
+</style>
+

@@ -46,9 +46,6 @@ button {
   margin-bottom: 1.6rem;
 }
 
-.form input {
-  margin-bottom: 1.6rem;
-}
 
 .list-header {
   background: #f7f7f7;
@@ -115,8 +112,9 @@ button {
 .textarea {
   border: 1px solid #cacccd;
   height: 50px;
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 300;
   padding: 1.2rem;
+  margin-bottom: 1.6rem;
   height: 10rem;
 }
