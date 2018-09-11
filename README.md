@@ -4,7 +4,7 @@ A website that helps you to save the info of expense in detail. This is coded in
 
 ## ScreenShots
 
-![Expensify](/Users/hptg/Documents/Projects/Web/Vue/Expensify-Vue/resource/expensify-vue.png)
+![Expensify](/resource/expensify-vue.png)
 
 ## Technology Track:
 
