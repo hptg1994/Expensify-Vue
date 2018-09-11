@@ -4,6 +4,7 @@ import App from './App.vue'
 import VueRouter from "vue-router"
 import { routes } from "./router/AppRouter"
 import { firebase } from './firebase/firebase';
+import { store } from "./store/store"
 Vue.use(VueRouter);
 // Vue.use(BootstrapVue);
 
@@ -15,6 +16,7 @@ let hasRendered = false;
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })  
 

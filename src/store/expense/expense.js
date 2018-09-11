@@ -1,28 +1,32 @@
 import database from "../../firebase/firebase";
+import uuidv1 from 'uuid/v1'
 
+const state = {
+  expenses:[]
+}
 const getters = {
   allExpense: state => {
-    return state;
+    return state.expense;
   }
 }
 
 const mutations = {
   // add expense
   "addExpense": (state, expenseData) => {
-    const uid = state.auth.uid
+    const uuid = uuidv1();
     const {
       description = "",
         note = "",
-        aamount = "",
-        createdAt = 0,
+        amount = "",
     } = expenseData;
     const expense = {
+      uuid,
       description,
       note,
       amount,
-      createdAt
     }
-    
+    console.log(expense);
+    state.expenses.push(expense);
     /* return database.ref("users/${uid}/expenses").push(expense).then((ref) => {
 
     }) */
@@ -30,13 +34,14 @@ const mutations = {
 
   // remove expense
   "removeExpense": (state, payload) => {
-    state.filter((item) => item.id !== payload)
+    state.filter((item) => item.uuid !== payload)
   },
 
   "editExpense": (state, payload) => {
     state.map((expense) => {
-      if (expense.id === payload.id) {
-        return { ...expense,
+      if (expense.uuid === payload.id) {
+        return { 
+          ...expense,
           payload
         }
       } else {
@@ -47,7 +52,7 @@ const mutations = {
 }
 
 const actions = {
-  addExpenseAction: ({
+  addExpense: ({
     commit
   }, payload) => {
     commit("addExpense", payload);
