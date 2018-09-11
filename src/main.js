@@ -3,12 +3,10 @@ import Vue from 'vue'
 import './plugins/vuetify'
 import App from './App.vue'
 // import BootstrapVue from 'bootstrap-vue'
-import  VueRouter from "vue-router"
-import 'vuetify/dist/vuetify.min.css'
-import { routes } from "./router/AppRouter"
-import Vuetify from 'vuetify'
- 
-Vue.use(Vuetify)
+import VueRouter from "vue-router"
+import {
+  routes
+} from "./router/AppRouter"
 Vue.use(VueRouter);
 // Vue.use(BootstrapVue);
 
