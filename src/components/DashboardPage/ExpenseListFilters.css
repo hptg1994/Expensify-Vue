@@ -19,3 +19,14 @@
     margin: 0 1.2rem 0 0;
   }
 }
+
+.input-date {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cacccd;
+  height: 50px;
+  font-size: 18px;
+  width: 140px;
+  font-weight: 300;
+  padding: 0px 10px;
+}
